@@ -1,0 +1,20 @@
+.logo {
+    font-size: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.centered {
+    /* center vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* center horizontally */
+    align-items: center;
+
+    background-color: aqua;
+}
