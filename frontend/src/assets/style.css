@@ -1,20 +1,128 @@
-.logo {
-    font-size: 30px;
+
+/* define colors */
+:root {
+    --background: #352F44;
+    --main: #FAF0E6;
+    --secondary: #5C5470;
+    --secondary-light: #B9B4C7;
 }
 
-.grid {
+
+/* background for all the page */
+html {
+    background-color: var(--background);
+    color: var(--main);
+
+}
+
+hr {
+    color: var(--secondary-light);
+    background-color: var(--secondary-light);
+    height: 1px;
+    border: none;
+}
+
+
+/* define link style */
+a {
+    color: var(--main);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--secondary-light);
+    border-bottom: 1px solid var(--secondary-light);
+}
+
+a:focus {
+    color: var(--secondary-light);
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+a:visited {
+    color: var(--main);
+}
+
+
+/* presentation section */
+.presentation{
+    text-align: center;
+
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.quote {
+    font-size: 1.4em;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.translate {
+    font-size: 0.7em;
+    font-style: italic;
+    font-weight: normal;
+    color: var(--secondary-light);
+}
+
+
+/* filtered list section */
+.parent {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
 
-.centered {
-    /* center vertically */
+/* collapse the div one on the top of the other if the screen is too small */
+@media (max-width: 600px) {
+    .parent {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.div1 { 
+    grid-area: 1 / 1 / 2 / 4;
+    padding-left: 0.2em;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* center horizontally */
     align-items: center;
+}
 
-    background-color: aqua;
+.div2 { 
+    grid-area: 1 / 4 / 2 / 6;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div2 select {
+
+    padding: 0.5em;
+    margin: 0.5em;
+    border: none;
+    border-radius: 0.1em;
+    background-color: var(--secondary-light);
+    color: var(--background);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+/* define the style of the list */
+.tablelist {
+    padding-top: 2em;
+    color: var(--main);
 }

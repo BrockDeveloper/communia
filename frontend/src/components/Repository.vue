@@ -1,13 +1,11 @@
 <template>
-    <li>
-        <a :href="item.url" target="_blank">
-            {{ item.author }}
-        </a>
-        /
-        <span> <i class="bi bi-star-fill"></i> {{ item.stars }} stelle</span>
-        /
-        <span> <i class="bi bi-calendar-event-fill"></i> {{ item.created }} - {{ item.updated }}</span>       
-    </li>
+
+<tr>
+    <td><a :href="item.url" target="_blank">{{ item.author }}</a></td>
+    <td> {{ item.stars }}</td>
+    <td> {{item.created}}-{{ item.updated }}</td>
+</tr>
+
 </template>
 
 <script>

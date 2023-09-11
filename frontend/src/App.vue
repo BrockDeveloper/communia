@@ -4,19 +4,20 @@
     <Navbar />
     <Presentation />
 
-    <br>
+    <hr>
 
-    <div class="grid">
-      <div class="centered">
-        Ordina repository per: 
-      </div>
-      <div class="centered">
-        <select v-model="selectedOrder">
+    <div class="parent">
+  <div class="div1">
+    Le repository possono essere ordinate alfabeticamente per autore, per numero di stelle 
+    ricevute su GitHub, o per data.
+  </div>
+  <div class="div2">
+    <select v-model="selectedOrder">
           <option value="author" selected>autore</option>
           <option value="star">stelle</option>
         </select>
-      </div>
-    </div>
+  </div>
+  </div> 
 
 
     <FilteredList :selectedOrder="selectedOrder"/>

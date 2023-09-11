@@ -1,9 +1,18 @@
 <template>
-  <div>
-    <!-- Contenuto del componente FilteredList.vue -->
-    <ul>
-      <Repository v-for="item in sortedItems" :key="item.url" :item="item"/>
-    </ul>
+  <div class="tablelist">
+
+    <table role="grid">
+        <thead>
+          <tr>
+            <th scope="col"><i class="bi bi-github"></i> Repository</th>
+            <th scope="col"><i class="bi bi-star-fill"></i> Stelle</th>
+            <th scope="col"><i class="bi bi-calendar-fill"></i> Attività</th>
+          </tr>
+        </thead>
+        <tbody>
+          <Repository v-for="item in sortedItems" :key="item.url" :item="item"/>
+        </tbody>
+      </table>
   </div>
 </template>
 
