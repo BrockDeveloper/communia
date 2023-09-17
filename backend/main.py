@@ -27,7 +27,7 @@ async def add_cors_header(request, call_next):
 
 
 
-@app.get("/")
+@app.get("/communia")
 def root():
 
     '''
