@@ -4,8 +4,10 @@ from pydantic import BaseModel
 class RepositoryInfo(BaseModel):
 
     '''
-    This class is used to store the repository baseinformation.
+    Rappresenta le informazioni essenziali di una repository, autore e url
+    che consente di ottenere le informazioni complete sulla repository.
     '''
+
 
     url: str
     author: str

@@ -1,13 +1,13 @@
-from pydantic import BaseModel
 from models.repositoryInfo import RepositoryInfo
 
 
 class Repository(RepositoryInfo):
 
     '''
-    This class is used to store the complete information of a repository.
-    These informations are getted from the Github API.
+    Rappresenta una repository con tutte le informazioni disponibili,
+    ovvero quelle essenziali e quelle ottenute dalle api di github.
     '''
+
 
     stars: int
     created: int
