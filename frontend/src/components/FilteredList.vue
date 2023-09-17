@@ -43,7 +43,7 @@ export default {
   methods: {
     fetchData() {
       // Esegui la richiesta GET quando il componente è montato
-      axios.get('http://localhost:8000')
+      axios.get('https://api.brockdev.it/communia')
         .then(response => {
           // Assegna i dati ottenuti dalla risposta a sortedItems
           this.sortedItems = response.data;
@@ -64,6 +64,10 @@ export default {
         itemsCopy.sort((a, b) => (a.author < b.author ? -1 : 1));
       } else if (this.selectedOrder === 'star') {
         itemsCopy.sort((a, b) => (a.stars > b.stars ? -1 : 1));
+      } else if (this.selectedOrder === 'recent') {
+        itemsCopy.sort((a, b) => (a.created > b.created ? -1 : 1));
+      } else if (this.selectedOrder === 'updated') {
+        itemsCopy.sort((a, b) => (a.updated > b.updated ? -1 : 1));
       }
 
 
