@@ -10,6 +10,9 @@ Nel corso delgi anni accademici, sono nate numerose repository GitHub di student
 
 Lo spirito informatico passa anche attraverso la condivizione e l'open source, perchè tra gli amici tutto è comune: [communia.brockdev.it](https://communia.brockdev.it)
 
+### Contribuisci
+Puoi contribuire contattandomi all'indirizzo _info@brockdev.it_, o inviandomi un messaggio su Discord _andrea.broccoletti_
+
 ### Realizzazione
 Il sito web è realizzato, nel solo _backend_, con FastAPI e Python, mentre il _frontend_ con il framework Vue.JS, il backend si interfaccia anche con le API ufficiali di GitHub per ottenere le informazioni basilari delle repository.
 
