@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
 
-/* define colors */
-:root {
-    --background: #352F44 !important;
-    --main: #FAF0E6 !important;
-    --secondary: #5C5470 !important;
-    --secondary-light: #B9B4C7 !important;
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --primary: #1c3342;
+  --primary-hover: #1c3342;
+  --primary-focus: none;
+  --primary-inverse: #FFF;
 }
-
-
+ 
+html {
+    font-family: 'Fira Mono', monospace;
+    font-family: 'Roboto', sans-serif;
+}
 
 nav {
     /* always show the navbar */
@@ -17,16 +21,25 @@ nav {
     right: 0;
     z-index: 1;
 
-    background-color: var(--secondary);
+    background-color: #dae4e8;
+    box-shadow: 0 6px 6px 0 rgba(124, 124, 124, 0.2);
 
     padding-left: 8em;
     padding-right: 8em;
+
+    height: 5.5em;
+}
+
+.menu-voice:hover {
+    font-weight: 300;
 }
 
 @media (max-width: 600px) {
     nav {
-        padding-left: 0.8em;
+        padding-left: 0.3em;
         padding-right: 0.8em;
+
+        height: 5em;
     }
 }
 
@@ -34,48 +47,9 @@ nav {
     margin-top: 3.5em;
 }
 
-/* background for all the page */
-html {
-    background-color: var(--background);
-    color: var(--main);
-
-}
-
 hr {
-    color: var(--secondary-light);
-    background-color: var(--secondary-light);
     height: 1px;
     border: none;
-}
-
-
-/* define link style */
-a {
-    color: var(--main);
-    text-decoration: none;
-    border-radius: 0px;
-}
-
-a:hover {
-    color: var(--secondary-light);
-    border-bottom: 1px solid var(--secondary-light);
-    border-radius: 0px;
-}
-
-a:focus {
-    color: var(--secondary-light);
-    border: none;
-    outline: none;
-    background-color: transparent;
-}
-
-a:visited {
-    color: var(--main);
-}
-
-.logo:hover {
-    border-bottom: 1px solid var(--secondary-light);
-
 }
 
 /* presentation section */
@@ -86,8 +60,14 @@ a:visited {
     padding-bottom: 2em;
 }
 
+hr {
+   background-color: #dae4e8;
+   border: 3px solid #dae4e8;
+   border-radius: 80px 80px 80px 80px;
+}
+
 .quote {
-    font-size: 1.4em;
+    font-size: 1.5em;
     font-style: italic;
     font-weight: bold;
     text-align: center;
@@ -100,7 +80,6 @@ a:visited {
     font-size: 0.7em;
     font-style: italic;
     font-weight: normal;
-    color: var(--secondary-light);
 }
 
 
@@ -139,25 +118,6 @@ a:visited {
     justify-content: center;
     align-items: center;
 }
-
-.div2 select {
-
-    padding: 0.5em;
-    margin: 0.5em;
-    border: none;
-    border-radius: 0.1em;
-    background-color: var(--secondary-light);
-    color: var(--background);
-    font-weight: bold;
-}
-
-
-/* define the style of the list */
-.tablelist {
-    padding-top: 2em;
-    color: var(--main);
-}
-
 
 .footer {
     text-align: center;

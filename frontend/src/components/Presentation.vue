@@ -3,7 +3,7 @@
     <div class="presentation">
 
         <div class="quote">
-            Amicorum communia omnia
+            Amicorum esse communia omnia
             <br>
             <span class="translate">Tra gli amici tutto è comune</span>
         </div>
@@ -15,7 +15,6 @@
         <br><br>
         Lo spirito informatico passa anche attraverso la condivisione e l'open source, quindi
         non esitate a contribuire! Perchè tra gli amici tutto è comune.
-
 
     </div>
 

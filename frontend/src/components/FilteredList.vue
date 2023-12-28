@@ -30,25 +30,21 @@ export default {
   },
   data() {
     return {
-      sortedItems: [] // Inizializziamo l'array vuoto
+      sortedItems: []
     };
   },
   mounted() {
     this.fetchData();
   },
   watch: {
-    // Osserva la prop selectedOrder
     selectedOrder: 'sortItems'
   },
   methods: {
     fetchData() {
-      // Esegui la richiesta GET quando il componente è montato
       axios.get('https://api.brockdev.it/communia')
         .then(response => {
-          // Assegna i dati ottenuti dalla risposta a sortedItems
           this.sortedItems = response.data;
 
-          // Ordina gli elementi in base all'opzione selezionata
           this.sortItems();
         })
         .catch(error => {
@@ -56,10 +52,9 @@ export default {
         });
     },
     sortItems() {
-      // Crea una copia degli elementi per non alterare l'array originale
       const itemsCopy = [...this.sortedItems];
 
-      // Ordina l'array in base all'opzione selezionata
+      // array order
       if (this.selectedOrder === 'author') {
         itemsCopy.sort((a, b) => (a.author < b.author ? -1 : 1));
       } else if (this.selectedOrder === 'star') {
@@ -69,7 +64,6 @@ export default {
       } else if (this.selectedOrder === 'updated') {
         itemsCopy.sort((a, b) => (a.updated > b.updated ? -1 : 1));
       }
-
 
       this.sortedItems = itemsCopy;
     }
