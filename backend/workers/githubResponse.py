@@ -6,8 +6,7 @@ from models.repositoryInfo import RepositoryInfo
 
 
 BASE_GIT_URL = "https://github.com/"
-BASE_API_URL = "https://api.github.com/users/"
-LAST_BASE_API_URL = "/repos"
+BASE_API_URL = "https://api.github.com/repos/"
 
 
 class GithubResponse:
@@ -36,7 +35,7 @@ class GithubResponse:
         '''
 
         self.repositoryInfo = repositoryInfo
-        self.apicall = BASE_API_URL + repositoryInfo.url.replace(BASE_GIT_URL, "") + LAST_BASE_API_URL
+        self.apicall = BASE_API_URL + repositoryInfo.url.replace(BASE_GIT_URL, "")
 
         self.response = self.__call__()
 
