@@ -60,6 +60,8 @@ class Util:
             githubResponse.call(repo)
 
             infos = githubResponse.get_infos()
-            repositories[repositories.index(repo)] = infos
+
+            if infos is not None:
+                repositories[repositories.index(repo)] = infos
 
         return repositories
